@@ -1,32 +1,11 @@
 <template>
   <!-- 头部整体盒子 -->
   <div id="header" class="container-fuild">
-    <!-- 头部顶部 -->
-    <div class="header-top container-fuild hidden-xs">
-      <div class="container">
-        <div class="server pull-left">
-          <span class="glyphicon glyphicon-earphone"></span>{{ phone }}
-          <span class="glyphicon glyphicon-envelope"></span>{{ email }}
-          <span class="glyphicon glyphicon-time"></span>7x24小时为您服务
-        </div>
-        <div class="shejiao pull-right">
-          <span class="glyphicon glyphicon-hand-right"></span>赶快联系我们吧！
-          <span class="glyphicon glyphicon-hand-left"></span>
-
-          <a
-            href="https://github.com/neveryu"
-            target="_blank"
-            style="color: #fc5531; font-size: 18px; cursor: pointer"
-            >Github</a
-          >
-        </div>
-      </div>
-    </div>
     <!-- 电脑导航 -->
     <div class="header-nav container hidden-xs">
       <!-- 导航logo -->
       <div class="header-nav-logo">
-        <img src="@/assets/img/logo_black.png" />
+        <img src="@/assets/img/LOGO.svg" @click="toHome"/>
       </div>
       <!-- 导航内容 -->
       <ul class="header-nav-wrapper">
@@ -57,7 +36,7 @@
       <div class="header-nav-m-logo">
         <img
           class="center-block"
-          src="@/assets/img/logo_black.png"
+          src="@/assets/img/LOGO.svg"
           alt="logo"
         />
       </div>
@@ -94,9 +73,9 @@
 </template>
 
 <script setup>
-import { ref, reactive } from 'vue'
-const phone = import.meta.env.VITE_APP_PHONE
-const email = import.meta.env.VITE_APP_EMAIL
+import { ref} from 'vue'
+import { useRouter } from "vue-router";
+const router = useRouter()
 const navIndex = ref('')
 navIndex.value = sessionStorage.getItem('navIndex')
   ? sessionStorage.getItem('navIndex')
@@ -110,44 +89,49 @@ const navList = [
     children: []
   },
   {
-    name: '软件产品',
-    path: '/software',
-    children: [
-      {
-        name: '智能小镇管理系统',
-        path: '/software/smartTown'
-      },
-      {
-        name: '大数据管理系统',
-        path: '/software/bigData'
-      }
-    ]
+    name: '会社情報',
+    path: '/',
+    children: []
   },
+  // {
+  //   name: '软件产品',
+  //   path: '/software',
+  //   children: [
+  //     {
+  //       name: '智能小镇管理系统',
+  //       path: '/software/smartTown'
+  //     },
+  //     {
+  //       name: '大数据管理系统',
+  //       path: '/software/bigData'
+  //     }
+  //   ]
+  // },
   {
-    name: '相关服务',
+    name: '投資実績',
     path: '/service',
     children: []
   },
   {
-    name: '新闻动态',
+    name: '新着情報',
     path: '/newsinformation',
     children: []
   },
   {
-    name: '公司介绍',
+    name: 'ギャラリー',
     path: '/companyintroduction',
     children: []
   },
   {
-    name: '工作机会',
+    name: 'IRお問い合わせ',
     path: '/jobchance',
     children: []
   },
-  {
-    name: '联系我们',
-    path: '/contactus',
-    children: []
-  }
+  // {
+  //   name: 'EN/JP',
+  //   path: '/',
+  //   children: []
+  // }
 ]
 function navClick(index, name) {
   navIndex.value = index
@@ -160,6 +144,12 @@ function menuClick() {
   } else {
     menuClass.value = 'glyphicon glyphicon-menu-down'
   }
+}
+function toHome() {
+  navIndex.value = "0"
+  sessionStorage.setItem('navIndex', "0")
+  menuName.value = "首页"
+  router.push("/home");
 }
 </script>
 
@@ -185,12 +175,12 @@ function menuClick() {
 
 /* 导航栏 */
 #header .header-nav {
-  height: 110px;
+  height: 80px;
 }
 
 /* 导航栏logo */
 #header .header-nav .header-nav-logo {
-  width: 100px;
+  width: 200px;
   height: 100%;
   float: left;
   position: relative;
@@ -198,8 +188,8 @@ function menuClick() {
 
 /* 导航栏logo图片 */
 #header .header-nav .header-nav-logo img {
-  width: 95px;
-  height: 45px;
+  /*width: 200px;*/
+  /*height: 22px;*/
   position: absolute;
   top: 0;
   left: 0;
@@ -214,7 +204,7 @@ function menuClick() {
 }
 
 #header .header-nav .header-nav-wrapper {
-  line-height: 110px;
+  line-height: 80px;
   float: right;
   margin: 0;
   max-width: 800px;

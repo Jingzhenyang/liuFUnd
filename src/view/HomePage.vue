@@ -1,32 +1,11 @@
 <template>
   <div id="HomePage">
-    <!-- 轮播图1111 -->
-    <swiper
-      id="swiper"
-      :modules="modules"
-      :slides-per-view="1"
-      :space-between="0"
-      navigation
-      lazy
-      loop
-      autoplay
-      :pagination="{
-        clickable: true
-      }"
-    >
-      <swiper-slide
-        class="banner-swiper"
-        v-for="(item, index) in swiperList"
-        :key="index"
-      >
-        <img class="swiper-lazy" :data-src="item.img" alt="轮播图" />
-        <div class="swiper-lazy-preloader"></div>
-        <div class="swiper-slide-title">
-          <h1>{{ item.title }}</h1>
-          <p>{{ item.content }}</p>
-        </div>
-      </swiper-slide>
-    </swiper>
+    <div id="homeBannerOne" class="container-fuild text-center">
+      <div class="text">
+        <h2>あなたと</h2>
+        <h2>一緒に未来を創出する</h2>
+      </div>
+    </div>
 
     <!-- 大数据管理系统 -->
     <div id="bigData" class="container-fuild">
@@ -51,7 +30,7 @@
           </p>
           <h2 class="bigData-device">PC/PAD/Phone &nbsp; 全设备支持</h2>
           <a href="javascript:;" class="btn btn-lg btn-block btn-info"
-            >联系我们</a
+          >联系我们</a
           >
         </div>
       </div>
@@ -99,10 +78,10 @@
             :key="index"
           >
             <div class="customer-logo">
-              <img class="center-block" :src="item.logo" alt="logo" />
+              <img class="center-block" :src="item.logo" alt="logo"/>
             </div>
             <div class="customer-yh">
-              <img src="@/assets/img/yinhao.png" alt="引号" />
+              <img src="@/assets/img/yinhao.png" alt="引号"/>
             </div>
             <div class="customer-content1">
               <small>{{ item.content }}</small>
@@ -118,10 +97,10 @@
             :key="index"
           >
             <div class="customer-logo">
-              <img class="center-block" :src="item.logo" alt="logo" />
+              <img class="center-block" :src="item.logo" alt="logo"/>
             </div>
             <div class="customer-yh">
-              <img src="@/assets/img/yinhao.png" alt="引号" />
+              <img src="@/assets/img/yinhao.png" alt="引号"/>
             </div>
             <div class="customer-content1">
               <small>{{ item.content }}</small>
@@ -152,7 +131,7 @@
               onmouseenter="this.style.color='#28f';this.style.borderColor='#28f'"
               onmouseleave="this.style.color='#666';this.style.borderColor='#ccc'"
             >
-              <img class="center-block" :src="item.logo" alt="logo" />
+              <img class="center-block" :src="item.logo" alt="logo"/>
               <p class="text-center">{{ item.title }}</p>
               <div
                 class="text-center"
@@ -170,10 +149,10 @@
 
 <script setup name="HomePage">
 import WOW from 'wow.js'
-import { getCurrentInstance, onMounted } from 'vue'
+import {getCurrentInstance, onMounted} from 'vue'
 // import Swiper from 'swiper'
-import { Navigation, Pagination, Scrollbar, A11y, Lazy, Autoplay } from 'swiper'
-import { Swiper, SwiperSlide } from 'swiper/vue'
+import {Navigation, Pagination, Scrollbar, A11y, Lazy, Autoplay} from 'swiper'
+import {Swiper, SwiperSlide} from 'swiper/vue'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
@@ -192,6 +171,9 @@ import img_tel from '@/assets/img/tel.png'
 import img_computer from '@/assets/img/computer.png'
 import img_qq from '@/assets/img/qq.png'
 import img_skill from '@/assets/img/skill.png'
+
+
+import homePage01 from '@/assets/img/homePage01.png'
 
 const swiperList = [
   {
@@ -349,47 +331,19 @@ onMounted(() => {
   width: 100%;
 }
 
-/* 顶部轮播图 */
-#swiper {
-  width: 100%;
-  height: 600px;
-}
-
-#swiper .banner-swiper {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-#swiper .banner-swiper img {
-  width: 100%;
-  height: 100%;
-}
-
-#swiper .banner-swiper .swiper-slide-title {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 999999999;
-  width: 100%;
-  height: 100%;
+#homeBannerOne{
   color: #fff;
-  background: rgba(51, 51, 51, 0.534);
-  text-align: center;
-  line-height: 80px;
+  height: 800px;
+  background: url('../assets/img/homePage01.png') 0 no-repeat;
+  background-size: 100% 100%;
+  transition: all ease 0.6s;
 }
-
-#swiper .banner-swiper .swiper-slide-title > h1 {
-  font-size: 50px;
-  margin-top: 12%;
+#homeBannerOne .text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
-#swiper .banner-swiper .swiper-slide-title > p {
-  font-size: 20px;
-  margin-top: 1%;
-  font-weight: 700;
-}
-
 /* 大数据管理系统 */
 #bigData {
   padding: 100px;
