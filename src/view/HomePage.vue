@@ -38,21 +38,29 @@
 
     <!-- 您身边的IT专家 -->
     <div id="contactUs" class="container-fuild text-center">
-      <div class="container contactUs-container wow slideInUp">
-        <h1>您身边的IT专家</h1>
-        <h3>7x24小时提供出色的IT服务</h3>
+      <div class="container contactUs-container">
+        <h1>企業理念</h1>
+        <div class="contactUs-contactWay">
+          <div>
+            <img src="@/assets/img/icon01.png">
+            <span>助力创业者追逐梦想</span>
+          </div>
+          <div>
+            <img src="@/assets/img/icon02.png">
+            <span>坚实的伙伴关系</span>
+          </div>
+          <div>
+            <img src="@/assets/img/icon03.png">
+            <span>社会影响力和可持续发展</span>
+          </div>
+        </div>
         <button
           class="btn btn-default btn-sm"
-          onmouseleave="this.style.borderColor='#ffffff'; this.style.backgroundColor='#ffffff'; this.style.color='#3f3f3f';"
-          onmouseenter="this.style.backgroundColor='transparent'; this.style.borderColor='#ffffff'; this.style.color='#ffffff';"
+          onmouseleave="this.style.borderColor='#a7a5a5'; this.style.backgroundColor='#a7a5a5'; this.style.color='#dcdce3';"
+          onmouseenter="this.style.backgroundColor='transparent'; this.style.borderColor='#a7a5a5'; this.style.color='#a7a5a5';"
         >
-          联系我们
+          <span style="font-size:20px">详细</span>
         </button>
-        <div class="contactUs-contactWay">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
       </div>
     </div>
 
@@ -368,9 +376,9 @@ onMounted(() => {
 
 /* 您身边的IT专家 */
 #contactUs {
-  color: #fff;
-  height: 400px;
-  background: url('../assets/img/contact_us_bg.jpg') 0 0 no-repeat;
+  color: black;
+  height: 650px;
+  background: url('../assets/img/LOGORe.png') 0 0 no-repeat;
   background-size: 100% 100%;
   transition: all ease 0.6s;
 }
@@ -385,25 +393,34 @@ onMounted(() => {
   margin-top: 40px;
 }
 
+#contactUs .contactUs-container .contactUs-contactWay img {
+  width: 200px;
+  height: 200px;
+  margin: 60px;
+}
+
+#contactUs .contactUs-container .contactUs-contactWay {
+  justify-content: space-around;
+  display: flex;
+}
+
 #contactUs .contactUs-container .contactUs-contactWay span {
-  display: inline-block;
-  width: 48px;
-  height: 48px;
-  margin: 30px;
+  font-size:30px;
+  color:grey;
 }
 
-#contactUs .contactUs-container .contactUs-contactWay span:nth-of-type(1) {
-  background: url('../assets/img/weixin.png') 0 0 no-repeat;
+#contactUs .contactUs-container .contactUs-contactWay div:nth-of-type(1) {
+  /*background: url('../assets/img/icon01.png') 0 0 no-repeat;*/
   background-size: 100% 100%;
 }
 
-#contactUs .contactUs-container .contactUs-contactWay span:nth-of-type(2) {
-  background: url('../assets/img/weibo.png') 0 0 no-repeat;
+#contactUs .contactUs-container .contactUs-contactWay div:nth-of-type(2) {
+  /*background: url('../assets/img/icon02.png') 0 0 no-repeat;*/
   background-size: 100% 100%;
 }
 
-#contactUs .contactUs-container .contactUs-contactWay span:nth-of-type(3) {
-  background: url('../assets/img/twitter.png') 0 0 no-repeat;
+#contactUs .contactUs-container .contactUs-contactWay div:nth-of-type(3) {
+  /*background: url('../assets/img/icon03.png') 0 0 no-repeat;*/
   background-size: 100% 100%;
 }
 
