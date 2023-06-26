@@ -8,151 +8,231 @@
     </div>
 
     <!-- 大数据管理系统 -->
-    <div id="bigData" class="container-fuild">
-      <div class="row bigData-container">
-        <div class="col-xs-12 col-sm-12 col-md-6 wow zoomIn">
-          <img
-            class="img-responsive"
-            src="@/assets/img/img1.png"
-            alt="大数据管理系统"
-          />
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-6">
-          <h2 class="bigData-title">
-            大数据管理系统
-            <small>/ Big Data Management System</small>
-          </h2>
-          <p>
-            当今最领先的响应式自助建站平台。无论您是普通互联网用户，还是专业网站制作人员，都能使用起飞页设计出最具专业水准的网站。想创建一个简单的单页式站点，还是一个专业的公司网站，亦或是一个别具一格的博客？起飞页可以满足您的所有需求。
-          </p>
-          <p>
-            我们的流线式网页布局设计方案和可视化图文内容编辑模式让网站制作和维护成为一件轻松惬意的事。无论您是普通互联网用户，还是专业网站制作人员。
-          </p>
-          <h2 class="bigData-device">PC/PAD/Phone &nbsp; 全设备支持</h2>
-          <a href="javascript:;" class="btn btn-lg btn-block btn-info"
-          >联系我们</a
-          >
-        </div>
-      </div>
-    </div>
+    <!--    <div id="bigData" class="container-fuild">-->
+    <!--      <div class="row bigData-container">-->
+    <!--        <div class="col-xs-12 col-sm-12 col-md-6 wow zoomIn">-->
+    <!--          <img-->
+    <!--            class="img-responsive"-->
+    <!--            src="@/assets/img/img1.png"-->
+    <!--            alt="大数据管理系统"-->
+    <!--          />-->
+    <!--        </div>-->
+    <!--        <div class="col-xs-12 col-sm-12 col-md-6">-->
+    <!--          <h2 class="bigData-title">-->
+    <!--            大数据管理系统-->
+    <!--            <small>/ Big Data Management System</small>-->
+    <!--          </h2>-->
+    <!--          <p>-->
+    <!--            当今最领先的响应式自助建站平台。无论您是普通互联网用户，还是专业网站制作人员，都能使用起飞页设计出最具专业水准的网站。想创建一个简单的单页式站点，还是一个专业的公司网站，亦或是一个别具一格的博客？起飞页可以满足您的所有需求。-->
+    <!--          </p>-->
+    <!--          <p>-->
+    <!--            我们的流线式网页布局设计方案和可视化图文内容编辑模式让网站制作和维护成为一件轻松惬意的事。无论您是普通互联网用户，还是专业网站制作人员。-->
+    <!--          </p>-->
+    <!--          <h2 class="bigData-device">PC/PAD/Phone &nbsp; 全设备支持</h2>-->
+    <!--          <a href="javascript:;" class="btn btn-lg btn-block btn-info"-->
+    <!--          >联系我们</a-->
+    <!--          >-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--    </div>-->
 
-    <!-- 您身边的IT专家 -->
     <div id="contactUs" class="container-fuild text-center">
-      <div class="container contactUs-container wow slideInUp">
-        <h1>您身边的IT专家</h1>
-        <h3>7x24小时提供出色的IT服务</h3>
+      <div class="container contactUs-container">
+        <h1>企業理念</h1>
+        <div class="contactUs-contactWay">
+          <div>
+            <img src="@/assets/img/icon01.png">
+            <span>助力创业者追逐梦想</span>
+          </div>
+          <div>
+            <img src="@/assets/img/icon02.png">
+            <span>坚实的伙伴关系</span>
+          </div>
+          <div>
+            <img src="@/assets/img/icon03.png">
+            <span>社会影响力和可持续发展</span>
+          </div>
+        </div>
         <button
           class="btn btn-default btn-sm"
-          onmouseleave="this.style.borderColor='#ffffff'; this.style.backgroundColor='#ffffff'; this.style.color='#3f3f3f';"
-          onmouseenter="this.style.backgroundColor='transparent'; this.style.borderColor='#ffffff'; this.style.color='#ffffff';"
+          onmouseleave="this.style.borderColor='#a7a5a5'; this.style.backgroundColor='#a7a5a5'; this.style.color='#dcdce3';"
+          onmouseenter="this.style.backgroundColor='transparent'; this.style.borderColor='#a7a5a5'; this.style.color='#a7a5a5';"
         >
-          联系我们
+          <span style="font-size:20px">详细</span>
         </button>
-        <div class="contactUs-contactWay">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
       </div>
     </div>
 
-    <!-- 客户评价 -->
-    <div id="customer" class="container-fuild">
-      <div class="container customer-container">
-        <p class="customer-title text-center">客户评价</p>
-        <swiper
-          class="swiper-container customer-swiper hidden-xs"
-          :modules="modules"
-          :slides-per-view="1"
-          :space-between="0"
-          navigation
-          loop
-          autoplay
-          :pagination="{
-            clickable: true
-          }"
-        >
-          <swiper-slide
-            class="swiper-slide customer-block"
-            v-for="(item, index) in customerList"
-            :key="index"
-          >
-            <div class="customer-logo">
-              <img class="center-block" :src="item.logo" alt="logo"/>
-            </div>
-            <div class="customer-yh">
-              <img src="@/assets/img/yinhao.png" alt="引号"/>
-            </div>
-            <div class="customer-content1">
-              <small>{{ item.content }}</small>
-            </div>
-            <div class="customer-content2">{{ item.title }}</div>
-          </swiper-slide>
-        </swiper>
 
-        <div class="row visible-xs customer-block">
-          <div
-            class="col-xs-12"
-            v-for="(item, index) in customerList"
-            :key="index"
-          >
-            <div class="customer-logo">
-              <img class="center-block" :src="item.logo" alt="logo"/>
-            </div>
-            <div class="customer-yh">
-              <img src="@/assets/img/yinhao.png" alt="引号"/>
-            </div>
-            <div class="customer-content1">
-              <small>{{ item.content }}</small>
-            </div>
-            <div class="customer-content2">
-              <small>{{ item.title }}</small>
-            </div>
+    <div id="support" class="container-fuild text-center">
+      <div class="container contactUs-container">
+        <h1>我们为您提供</h1>
+        <div class="contactUs-contactWay">
+          <div>
+            <span>多元化投资方式</span>
+            <ul>
+              <li>设立子公司</li>
+              <li>共同投资</li>
+              <li>企业收购</li>
+            </ul>
+          </div>
+          <div>
+            <span>多方位创业支持</span>
+            <ul>
+              <li>行政</li>
+              <li>管理</li>
+              <li>经营</li>
+              <li>设施</li>
+            </ul>
+          </div>
+          <div>
+            <span>多角度融资支持</span>
+            <ul>
+              <li>商业规划</li>
+              <li>组织振兴</li>
+              <li>技术支持</li>
+            </ul>
+          </div>
+        </div>
+        <button
+          class="btn btn-default btn-sm"
+          onmouseleave="this.style.borderColor='#a7a5a5'; this.style.backgroundColor='#a7a5a5'; this.style.color='#dcdce3';"
+          onmouseenter="this.style.backgroundColor='transparent'; this.style.borderColor='#a7a5a5'; this.style.color='#a7a5a5';"
+        >
+          <span style="font-size:20px">详细</span>
+        </button>
+      </div>
+    </div>
+
+    <div id="contact" class="container-fuild text-center">
+      <div class="container contactUs-container">
+        <h1 style="margin-bottom: 50px">IRお問い合わせ</h1>
+        <p>ご質問、ご相談等が御座いましたら、お電話または下記のフォームよりお問い合わせください。下記の</p>
+        <p>入力フォームに必要事項を入力いただき、一週間以内に担当者よりご連絡させていただきます。</p>
+        <hr class="hr-solid">
+        <p>LIUFUND株式会社</p>
+        <p>お電話でのお問い合わせ</p>
+        <p>営業担当　XXX</p>
+        <p>０００ー１１１１−２２２２</p>
+        <hr class="hr-solid">
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-12">
+            <form class="form-horizontal" role="form">
+              <div class="form-group col-md-6">
+                <label for="name" class="col-sm-2 control-label">貴社名</label>
+                <div class="col-sm-10 col-xs-12">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder=""
+                  />
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="email" class="col-sm-2 control-label">メールアドレス*</label>
+                <div class="col-sm-10">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="email"
+                    placeholder="请输入邮箱"
+                  />
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="tel" class="col-sm-2 control-label">ご氏名*</label>
+                <div class="col-sm-10">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="tel"
+                    placeholder=""
+                  />
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="tel" class="col-sm-2 control-label">フリガナ*</label>
+                <div class="col-sm-10">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="jp"
+                    placeholder=""
+                  />
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="content" class="col-sm-2 control-label">内容</label>
+                <div class="col-sm-10">
+                  <textarea
+                    class="form-control"
+                    id="content"
+                    rows="8"
+                    placeholder="请输入内容"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="content" class="col-sm-2 control-label">添付ファイル</label>
+                <div class="col-sm-10">
+
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10" style="margin-left: 38%">
+                  <button
+                    class="btn btn-default btn-block"
+                    @click.stop="submitForm"
+                  > 送信
+                  </button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
 
     <!-- 为什么选择我们 -->
-    <div id="whyChooseUs" class="conatiner-fuild">
-      <div class="container">
-        <div class="whyChooseUs-title text-center">
-          <p>为什么选择我们的服务</p>
-          <p>THE REASON TO CHOOSING US</p>
-        </div>
-        <div class="row">
-          <div
-            class="col-xs-12 col-sm-6 col-md-3 server-wrapper"
-            v-for="(item, index) in serverList"
-            :key="index"
-          >
-            <div
-              class="server-block wow slideInUp"
-              onmouseenter="this.style.color='#28f';this.style.borderColor='#28f'"
-              onmouseleave="this.style.color='#666';this.style.borderColor='#ccc'"
-            >
-              <img class="center-block" :src="item.logo" alt="logo"/>
-              <p class="text-center">{{ item.title }}</p>
-              <div
-                class="text-center"
-                v-html="item.content"
-                onmouseenter="this.style.color='#28f'"
-                onmouseleave="this.style.color='#ccc'"
-              ></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!--    <div id="whyChooseUs" class="conatiner-fuild">-->
+    <!--      <div class="container">-->
+    <!--        <div class="whyChooseUs-title text-center">-->
+    <!--          <p>为什么选择我们的服务</p>-->
+    <!--          <p>THE REASON TO CHOOSING US</p>-->
+    <!--        </div>-->
+    <!--        <div class="row">-->
+    <!--          <div-->
+    <!--            class="col-xs-12 col-sm-6 col-md-3 server-wrapper"-->
+    <!--            v-for="(item, index) in serverList"-->
+    <!--            :key="index"-->
+    <!--          >-->
+    <!--            <div-->
+    <!--              class="server-block wow slideInUp"-->
+    <!--              onmouseenter="this.style.color='#28f';this.style.borderColor='#28f'"-->
+    <!--              onmouseleave="this.style.color='#666';this.style.borderColor='#ccc'"-->
+    <!--            >-->
+    <!--              <img class="center-block" :src="item.logo" alt="logo"/>-->
+    <!--              <p class="text-center">{{ item.title }}</p>-->
+    <!--              <div-->
+    <!--                class="text-center"-->
+    <!--                v-html="item.content"-->
+    <!--                onmouseenter="this.style.color='#28f'"-->
+    <!--                onmouseleave="this.style.color='#ccc'"-->
+    <!--              ></div>-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--    </div>-->
   </div>
 </template>
 
 <script setup name="HomePage">
 import WOW from 'wow.js'
-import {getCurrentInstance, onMounted} from 'vue'
-// import Swiper from 'swiper'
+import {onMounted} from 'vue'
 import {Navigation, Pagination, Scrollbar, A11y, Lazy, Autoplay} from 'swiper'
-import {Swiper, SwiperSlide} from 'swiper/vue'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
@@ -160,132 +240,12 @@ import 'swiper/css/scrollbar'
 import 'swiper/css/lazy'
 import 'swiper/css/autoplay'
 
-import banner1 from '@/assets/img/banner1.png'
-import banner2 from '@/assets/img/banner2.jpg'
-
-import logo_hp from '@/assets/img/logo_hp.png'
-import logo_kk from '@/assets/img/logo_kk.png'
-import logo_toyota from '@/assets/img/logo_toyota.png'
-
 import img_tel from '@/assets/img/tel.png'
 import img_computer from '@/assets/img/computer.png'
 import img_qq from '@/assets/img/qq.png'
 import img_skill from '@/assets/img/skill.png'
 
-
-import homePage01 from '@/assets/img/homePage01.png'
-
-const swiperList = [
-  {
-    img: banner1,
-    title: '您身边的IT专家1',
-    content: '宣传简介您身边的IT专家1宣传简介您身边的IT专家1'
-  },
-  {
-    img: banner2,
-    title: '您身边的IT专家2',
-    content: '宣传简介您身边的IT专家2宣传简介您身边的IT专家2'
-  },
-  {
-    img: banner1,
-    title: '您身边的IT专家3',
-    content: '宣传简介您身边的IT专家3宣传简介您身边的IT专家3'
-  },
-  {
-    img: banner2,
-    title: '您身边的IT专家4',
-    content: '宣传简介您身边的IT专家4宣传简介您身边的IT专家4'
-  }
-]
-
 const modules = [Navigation, Pagination, Scrollbar, A11y, Lazy, Autoplay]
-
-const customerList = [
-  {
-    logo: logo_hp,
-    title:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。',
-    content:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。'
-  },
-  {
-    logo: logo_kk,
-    title:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。',
-    content:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。'
-  },
-  {
-    logo: logo_toyota,
-    title:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。',
-    content:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。'
-  },
-  {
-    logo: logo_kk,
-    title:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。',
-    content:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。'
-  },
-  {
-    logo: logo_hp,
-    title:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。',
-    content:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。'
-  },
-  {
-    logo: logo_toyota,
-    title:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。',
-    content:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。'
-  },
-  {
-    logo: logo_kk,
-    title:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。',
-    content:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。'
-  },
-  {
-    logo: logo_hp,
-    title:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。',
-    content:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。'
-  },
-  {
-    logo: logo_toyota,
-    title:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。',
-    content:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。'
-  },
-  {
-    logo: logo_hp,
-    title:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。',
-    content:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。'
-  },
-  {
-    logo: logo_kk,
-    title:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。',
-    content:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。'
-  },
-  {
-    logo: logo_hp,
-    title:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。',
-    content:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。'
-  }
-]
 
 const serverList = [
   {
@@ -331,157 +291,102 @@ onMounted(() => {
   width: 100%;
 }
 
-#homeBannerOne{
+#homeBannerOne {
   color: #fff;
   height: 800px;
   background: url('../assets/img/homePage01.png') 0 no-repeat;
   background-size: 100% 100%;
   transition: all ease 0.6s;
 }
-#homeBannerOne .text{
+
+#homeBannerOne .text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-/* 大数据管理系统 */
-#bigData {
-  padding: 100px;
-  transition: all ease 0.6s;
-  box-sizing: border-box;
-}
 
-#bigData .bigData-title {
-  padding-bottom: 10px;
-  border-bottom: 1px solid #ccc;
-}
-
-#bigData p {
-  font-size: 14px;
-  color: #333;
-  line-height: 2rem;
-}
-
-#bigData .bigData-device {
-  margin: 50px 0 20px;
-}
-
-/* 您身边的IT专家 */
 #contactUs {
-  color: #fff;
-  height: 400px;
-  background: url('../assets/img/contact_us_bg.jpg') 0 0 no-repeat;
+  color: black;
+  height: 800px;
+  background: url('../assets/img/LOGORe.png') 0 0 no-repeat;
   background-size: 100% 100%;
   transition: all ease 0.6s;
 }
 
-#contactUs .contactUs-container {
+.contactUs-container {
   padding-top: 50px;
 }
 
-#contactUs .contactUs-container button {
+.contactUs-container button {
   width: 300px;
   height: 50px;
   margin-top: 40px;
 }
 
+#contactUs .contactUs-container .contactUs-contactWay img {
+  width: 200px;
+  height: 200px;
+  margin: 60px;
+}
+
+.contactUs-container .contactUs-contactWay {
+  justify-content: space-around;
+  display: flex;
+  margin-top: 80px;
+}
+
 #contactUs .contactUs-container .contactUs-contactWay span {
-  display: inline-block;
-  width: 48px;
-  height: 48px;
-  margin: 30px;
+  font-size: 30px;
+  color: grey;
 }
 
-#contactUs .contactUs-container .contactUs-contactWay span:nth-of-type(1) {
-  background: url('../assets/img/weixin.png') 0 0 no-repeat;
+#support {
+  color: black;
+  height: 600px;
   background-size: 100% 100%;
-}
-
-#contactUs .contactUs-container .contactUs-contactWay span:nth-of-type(2) {
-  background: url('../assets/img/weibo.png') 0 0 no-repeat;
-  background-size: 100% 100%;
-}
-
-#contactUs .contactUs-container .contactUs-contactWay span:nth-of-type(3) {
-  background: url('../assets/img/twitter.png') 0 0 no-repeat;
-  background-size: 100% 100%;
-}
-
-/* 客户评价 */
-#customer {
-  padding: 50px 0;
-  box-sizing: border-box;
-  background: #efefef;
   transition: all ease 0.6s;
 }
 
-#customer .customer-title {
+#support .contactUs-container .contactUs-contactWay span {
   font-size: 30px;
-  color: rgb(102, 102, 102);
-  margin: 0 0 30px;
+  color: black;
 }
 
-#customer .customer-block {
-  background: #fff;
-  padding: 30px 80px;
-}
-
-#customer .customer-logo img {
-  width: 94px;
-  height: 94px;
-  border: 1px solid #ccc;
-}
-
-#customer .customer-yh img {
-  width: 34px;
-  height: 34px;
-}
-
-#customer .customer-content1 {
-  padding-bottom: 20px;
-  border-bottom: 1px solid #0ce9f1;
-}
-
-#customer .customer-content2 {
-  padding-top: 20px;
-}
-
-/* 为什么选择我们 */
-#whyChooseUs {
-  padding: 100px;
-}
-
-#whyChooseUs .whyChooseUs-title {
-  margin-bottom: 50px;
-}
-
-#whyChooseUs .whyChooseUs-title p:nth-of-type(1) {
-  font-size: 25px;
-  font-weight: 500;
-}
-
-#whyChooseUs .whyChooseUs-title p:nth-of-type(2) {
-  font-size: 14px;
-}
-
-#whyChooseUs .server-block {
-  padding: 50px 20px;
-  border: 1px solid #ccc;
-  border-bottom: 5px solid #ccc;
-}
-
-#whyChooseUs .server-block img {
-  width: 48px;
-  height: 48px;
-}
-
-#whyChooseUs .server-block > p {
+#support .contactUs-container .contactUs-contactWay li {
   font-size: 20px;
-  margin: 30px 0;
+  color: black;
 }
 
-#whyChooseUs .server-block > div {
-  color: #ccc;
+#contactUs .contactUs-container .contactUs-contactWay div:nth-of-type(1) {
+  /*background: url('../assets/img/icon01.png') 0 0 no-repeat;*/
+  background-size: 100% 100%;
+}
+
+#contactUs .contactUs-container .contactUs-contactWay div:nth-of-type(2) {
+  /*background: url('../assets/img/icon02.png') 0 0 no-repeat;*/
+  background-size: 100% 100%;
+}
+
+#contactUs .contactUs-container .contactUs-contactWay div:nth-of-type(3) {
+  /*background: url('../assets/img/icon03.png') 0 0 no-repeat;*/
+  background-size: 100% 100%;
+}
+
+#contact {
+  color: black;
+  height: 1000px;
+  background-color: #F0F0F0;
+  background-size: 100% 100%;
+  transition: all ease 0.6s;
+}
+#contact .contactUs-container p{
+  font-size:20px;
+  font-weight: lighter;
+}
+.hr-solid {
+  border: 0;
+  border-top: 1px solid black;
 }
 
 /* 媒体查询（手机） */
@@ -533,29 +438,6 @@ onMounted(() => {
     margin: 10px;
   }
 
-  #customer {
-    padding: 30px 0;
-    box-sizing: border-box;
-    background: #fff;
-  }
-
-  #customer .customer-title {
-    font-size: 16px;
-    font-weight: bold;
-  }
-
-  #customer .customer-logo img {
-    width: 48px;
-    height: 48px;
-  }
-
-  #customer .customer-block {
-    padding: 30px;
-  }
-
-  #customer .customer-block > div {
-    padding: 30px 0;
-  }
 
   #whyChooseUs {
     padding: 20px 0;
